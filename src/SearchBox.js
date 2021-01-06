@@ -25,12 +25,12 @@ export default function SearchBox() {
     e.preventDefault();
     
   };
-const url = "https://api.unsplash.com/search/photos?page=2&query="+query+"&client_id="+clientId;
+const url = "https://api.unsplash.com/search/photos?page=4&query="+query+"&client_id="+clientId;
   useEffect(()=>{
     axios.get(url)
     .then(res =>{
       setResult(res.data.results);
-      console.log(result);
+      // console.log(result);
 
     })
     .catch(err =>{  
